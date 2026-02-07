@@ -937,3 +937,190 @@ body {
     justify-content: center;
   }
 }
+
+/* =======================
+   MOBILE RESPONSIVE
+   ======================= */
+@media (max-width: 768px) {
+  /* HEADER */
+  .header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  /* HOME LAYOUT */
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 220px 5% 40px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* TEXT FIRST */
+  .home-content {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .home-content h3 {
+    font-size: 22px;
+    margin-left: -150px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .text {
+    margin-left: -100px; /* 🔥 removes extra gap */
+    display: inline;
+  }
+
+  .typed-cursor {
+    margin-left: 0;
+  }
+
+  /* ROBOT BELOW TEXT */
+  .robot-wrapper {
+    order: 2;
+    width: 200px;
+    height: 200px;
+    margin-top: 55px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .robot-3d {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.6);
+    transform-origin: center;
+    display: block;
+  }
+  eleement.style {
+    display: block !important;
+  }
+  /* .container-3d {
+    padding: 40px 20px;
+    display: none !important;
+  } */
+  /* #spline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+  } */
+  /* ABOUT SECTION */
+  .about {
+    display: flex; /* important */
+    flex-direction: column; /* stack items vertically */
+    padding: 60px 5%;
+    text-align: left;
+  }
+
+  .about-text {
+    order: 1; /* text first */
+    margin-bottom: 30px;
+  }
+
+  .about-img {
+    order: 2; /* image second (UNDER text) */
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+  }
+
+  /* SKILLS */
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-list div {
+    width: 90%;
+    height: auto;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .container1 {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio-content {
+    padding: 0 5%;
+    grid-template-columns: 1fr;
+  }
+
+  .main-text h2 {
+    font-size: 38px;
+  }
+
+  /* CONTACT */
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+    text-align: center;
+  }
+
+  .contact-text p {
+    font-size: 18px;
+  }
+
+  .contact-form form {
+    align-items: center;
+  }
+
+  .send {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .portfolio-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}

@@ -48,10 +48,13 @@
           </a>
         </div>
 
-        <spline-viewer
-          class="robot-3d"
-          url="https://prod.spline.design/qnTY4paGJ25odEUe/scene.splinecode"
-        ></spline-viewer>
+        <div class="robot-wrapper">
+          <spline-viewer
+            class="robot-3d"
+            url="https://prod.spline.design/qnTY4paGJ25odEUe/scene.splinecode"
+          >
+          </spline-viewer>
+        </div>
       </div>
 
       <!--  
@@ -280,15 +283,15 @@
         </ul>
 
         <div class="contact-icons">
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-twitter"></i></a>
-          <a
+          <!-- <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a> -->
+          <!-- <a
             href="https://www.instagram.com/pratikchougule_07/"
             target="_blank"
             aria-label="Instagram"
           >
             <i class="bx bxl-instagram"></i>
-          </a>
+          </a> -->
 
           <a
             href="https://www.linkedin.com/in/pratik-chougule-749664303/"
@@ -297,15 +300,49 @@
           >
             <i class="bx bxl-linkedin"></i>
           </a>
+          <a
+            href="mailto:chougulepratik301@gmail.com"
+            target="_blank"
+            aria-label="Gmail"
+          >
+            <i class="bx bxl-gmail"></i>
+          </a>
+          <a
+            href="https://github.com/PokerPratik"
+            target="_blank"
+            aria-label="Github"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
         </div>
       </div>
 
       <div class="contact-form">
-        <form>
-          <input type="text" placeholder="Enter Your Name" required />
-          <input type="email" placeholder="Enter Your Email" required />
-          <input type="text" placeholder="Enter Your Subject" />
-          <textarea rows="10" placeholder="Enter Your Message"></textarea>
+        <form id="contact-form">
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Enter Your Subject"
+            required
+          />
+          <textarea
+            name="message"
+            rows="10"
+            placeholder="Enter Your Message"
+            required
+          ></textarea>
           <input type="submit" value="Submit" class="send" />
         </form>
       </div>
@@ -332,15 +369,25 @@
           <i class="bx bxl-linkedin"></i>
         </a>
 
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bxl-gmail"></i></a>
         <a
+          href="mailto:chougulepratik301@gmail.com"
+          target="_blank"
+          aria-label="Gmail"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+        <a
+          href="https://github.com/PokerPratik"
+          target="_blank"
+          aria-label="Github"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <!-- <a
           href="https://www.instagram.com/pratikchougule_07/"
           target="_blank"
           aria-label="Instagram"
         >
           <i class="bx bxl-instagram"></i>
-        </a>
+        </a> -->
       </div>
     </footer>
 
@@ -363,5 +410,35 @@
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.12.48/build/spline-viewer.js"
     ></script>
+
+    <!-- after clicked submit button in contact form -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+      emailjs.init("xmh9Oocmf8ZYuDljF"); // ✅ Public Key
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs
+            .sendForm(
+              "service_7fi1qz5", // ✅ Service ID
+              "template_66jmzqe", // ✅ Template ID
+              this, // ✅ NO comma
+            )
+            .then(
+              function () {
+                alert("✅ Message sent successfully!");
+                document.getElementById("contact-form").reset();
+              },
+              function (error) {
+                console.error("EmailJS error:", error);
+                alert("❌ Failed: " + error.text);
+              },
+            );
+        });
+    </script>
   </body>
 </html>
