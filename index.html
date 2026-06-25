@@ -1,639 +1,745 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pratik Chougule — MERN Stack & Frontend Developer. Building fast, modern, and accessible web applications." />
-    <title>Pratik Chougule | Portfolio</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Pratik Chougule — MERN Stack & Frontend Developer. Building fast, modern, and accessible web applications." />
+  <title>Pratik Chougule | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- HEADER -->
-    <header class="header">
-      <a href="#" class="logo">Pratik.</a>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <nav class="navbar" id="navbar">
-        <a href="#"      class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skill" class="nav-link">Services</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#project" class="nav-link">Portfolio</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
+<body>
 
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </header>
-
-    <!-- Mobile Nav Drawer -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-    <nav class="mobile-nav" id="mobileNav">
-      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
-        <i class="bx bx-x"></i>
-      </button>
-      <div class="mobile-nav-logo">Pratik.</div>
-      <a href="#"       class="mobile-nav-link">Home</a>
-      <a href="#about"  class="mobile-nav-link">About</a>
-      <a href="#skill"  class="mobile-nav-link">Services</a>
-      <a href="#skills" class="mobile-nav-link">Skills</a>
-      <a href="#project" class="mobile-nav-link">Portfolio</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
-      <div class="mobile-nav-socials">
-        <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="mailto:chougulepratik301@gmail.com"                     target="_blank"><i class="bx bxl-gmail"></i></a>
-        <a href="https://github.com/PokerPratik"                        target="_blank"><i class="bx bxl-github"></i></a>
+  <!-- SPLASH SCREEN -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-content">
+      <div class="splash-logo">Welcome to My <span>Portfolio</span></div>
+      <p class="splash-tagline">MERN Stack &amp; Frontend Developer</p>
+      <div class="splash-loader">
+        <div class="splash-bar"></div>
       </div>
+    </div>
+    <!-- Decorative glows -->
+    <div class="splash-glow splash-glow--1"></div>
+    <div class="splash-glow splash-glow--2"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <nav class="navbar" id="navbar">  
+      <a href="#" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skill" class="nav-link">Services</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#project" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <!-- HOME / HERO -->
-    <section class="home">
-      <div class="home-content">
-        <div class="greeting">Available for Work</div>
-        <h3>Hello, I'm</h3>
-        <h1>Pratik Chougule</h1>
-        <p class="role-line">And I'm a <span class="text"></span></p>
-        <p>
-          I craft high-performance web experiences using the MERN stack — turning ideas into elegant, 
-          scalable, and user-friendly digital products.
-        </p>
-        <div class="cta-buttons">
-          <a href="#project" class="cta-btn">
-            View Projects <i class="bx bx-folder-open"></i>
-          </a>
-          <a href="#contact" class="cta-btn">
-            Get In Touch <i class="bx bx-envelope"></i>
-          </a>
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+      <i class="bx bx-x"></i>
+    </button>
+    <div class="mobile-nav-logo">Pratik.</div>
+    <a href="#" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skill" class="mobile-nav-link">Services</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#project" class="mobile-nav-link">Portfolio</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <div class="mobile-nav-socials">
+      <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank"><i
+          class="bx bxl-linkedin"></i></a>
+      <a href="mailto:chougulepratik301@gmail.com" target="_blank"><i class="bx bxl-gmail"></i></a>
+      <a href="https://github.com/PokerPratik" target="_blank"><i class="bx bxl-github"></i></a>
+    </div>
+  </nav>
+
+  <!-- HOME / HERO -->
+  <section class="home">
+    <div class="home-content">
+      <div class="greeting">Available for Work</div>
+      <h3>Hello, I'm</h3>
+      <h1>Pratik Chougule</h1>
+      <p class="role-line">And I'm a <span class="text"></span></p>
+      <p>
+        I craft high-performance web experiences using the MERN stack — turning ideas into elegant,
+        scalable, and user-friendly digital products.
+      </p>
+      <div class="cta-buttons">
+        <a href="#project" class="cta-btn">
+          View Projects <i class="bx bx-folder-open"></i>
+        </a>
+        <a href="#contact" class="cta-btn">
+          Get In Touch <i class="bx bx-envelope"></i>
+        </a>
+      </div>
+      
+      <!-- Hero Tech Icons -->
+      <div class="home-mern-stack" data-reveal="up" data-delay="300">
+        <div class="mern-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" />
         </div>
       </div>
-
-      <div class="robot-wrapper">
-        <spline-viewer
-          class="robot-3d"
-          url="https://prod.spline.design/qnTY4paGJ25odEUe/scene.splinecode"
-        ></spline-viewer>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-
-      <!-- Section Header (full width) -->
-      <div class="about-header">
-        <p class="about-tag">— Who I Am</p>
-        <h2 class="about-title">About <span>Me</span></h2>
-        <p class="about-subtitle">Transforming ideas into digital experiences</p>
-      </div>
-
-      <!-- Two-column body -->
-      <div class="about-body">
-
-        <!-- LEFT: Bio -->
-        <div class="about-left">
-          <p class="about-hello">Hello, I'm</p>
-          <h3 class="about-name">Pratik Chougule</h3>
-          <p class="about-bio">
-            I am an MCA student passionate about Web Development and Design.
-            I focus on creating engaging, user-friendly digital experiences and
-            always strive to deliver the best solution for every project. I love
-            turning ideas into reality using clean and efficient code — exploring
-            new technologies, frameworks, and design trends to keep my work
-            modern and effective.
-          </p>
-
-          <!-- Stats strip -->
-          <div class="about-stats-strip">
-            <div class="astat">
-              <span class="astat-num">1+</span>
-              <span class="astat-label">Years Exp.</span>
-            </div>
-            <div class="astat-divider"></div>
-            <div class="astat">
-              <span class="astat-num">10+</span>
-              <span class="astat-label">Projects</span>
-            </div>
-            <div class="astat-divider"></div>
-            <div class="astat">
-              <span class="astat-num">5+</span>
-              <span class="astat-label">Technologies</span>
-            </div>
-          </div>
-
-          <!-- Buttons -->
-          <div class="about-buttons">
-            <a href="#" class="about-btn about-btn-primary">
-              <i class="bx bx-download"></i> Resume
-            </a>
-            <a href="#project" class="about-btn about-btn-outline">
-              <i class="bx bx-folder-open"></i> View Projects
-            </a>
-          </div>
-        </div>
-
-        <!-- RIGHT: Expertise Cards -->
-        <div class="about-right">
-
-          <div class="exp-card">
-            <div class="exp-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Web Dev" style="width: 32px; height: 32px; object-fit: contain;" />
-            </div>
-            <div class="exp-info">
-              <h4>Web Development</h4>
-              <p>Building responsive, modern web apps with clean, maintainable code for exceptional user experiences.</p>
-            </div>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" style="width: 32px; height: 32px; object-fit: contain;" />
-            </div>
-            <div class="exp-info">
-              <h4>React &amp; Frontend</h4>
-              <p>Dynamic, interactive interfaces using React with scalable, component-based architecture.</p>
-            </div>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="MERN" style="width: 32px; height: 32px; object-fit: contain;" />
-            </div>
-            <div class="exp-info">
-              <h4>MERN Stack</h4>
-              <p>Full-stack applications using MongoDB, Express.js, React, and Node.js end-to-end.</p>
-            </div>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="UI/UX" style="width: 32px; height: 32px; object-fit: contain;" />
-            </div>
-            <div class="exp-info">
-              <h4>UI / UX Design</h4>
-              <p>Clean, user-first interfaces — from wireframes to polished, pixel-perfect layouts.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services" id="skill">
-      <div class="sub-title">
-        <h2>My <span>Services</span></h2>
-        <p class="section-subtitle">What I can do for you</p>
-      </div>
-
-      <div class="services-container">
-        <div class="services-list">
-          <!-- Service 1 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="UI/UX Design" />
-            </div>
-            <div class="service-info">
-              <h3>UI / UX Design</h3>
-              <p>
-                Designing clean, intuitive interfaces that put users first. 
-                From wireframes to pixel-perfect layouts with modern design principles.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service 2 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="Web Development" />
-            </div>
-            <div class="service-info">
-              <h3>Web Development</h3>
-              <p>
-                Building responsive, fast, and accessible websites using 
-                HTML, CSS, JavaScript, and modern frameworks like React.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MERN Stack" />
-            </div>
-            <div class="service-info">
-              <h3>MERN Stack</h3>
-              <p>
-                End-to-end application development with MongoDB, Express, 
-                React, and Node.js — from database design to deployment.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service 4 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="API Development" />
-            </div>
-            <div class="service-info">
-              <h3>API Development</h3>
-              <p>
-                Designing and building robust RESTful APIs with proper authentication,
-                rate limiting, and clean documentation.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service 5 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="Database Design" />
-            </div>
-            <div class="service-info">
-              <h3>Database Design</h3>
-              <p>
-                Architecting efficient database schemas using MongoDB and MySQL,
-                optimized for scalability and performance.
-              </p>
-            </div>
-          </div>
-
-          <!-- Service 6 -->
-          <div class="service-card">
-            <div class="service-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Mobile-First Design" />
-            </div>
-            <div class="service-info">
-              <h3>Mobile-First Design</h3>
-              <p>
-                Building fully responsive layouts that look stunning on every device,
-                from large desktops to small smartphones.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <div class="skills-section-title">
-      <h2>My <span>Skills</span></h2>
     </div>
 
-    <section class="skills-wrapper">
-      <!-- Technical Skills -->
-      <div class="container1" id="skills">
-        <h2 class="heading1">Technical Skills</h2>
+    <div class="robot-wrapper">
+      <spline-viewer class="robot-3d"
+        url="https://prod.spline.design/qnTY4paGJ25odEUe/scene.splinecode"></spline-viewer>
+    </div>
+  </section>
 
-        <div class="technical-bars">
-          <div class="bar">
-            <i class="fa-brands fa-html5" style="color:#e34c26;"></i>
-            <div class="info"><span>HTML5</span></div>
-            <div class="progress-line html"><span></span></div>
-          </div>
+  <!-- ABOUT -->
+  <section class="about" id="about">
 
-          <div class="bar">
-            <i class="fa-brands fa-css3-alt" style="color:#264de4;"></i>
-            <div class="info"><span>CSS3</span></div>
-            <div class="progress-line css"><span></span></div>
-          </div>
+    <!-- Section Header (full width) -->
+    <div class="about-header" data-reveal="up">
+      <p class="about-tag">— Who I Am</p>
+      <h2 class="about-title">About <span>Me</span></h2>
+      <p class="about-subtitle">Transforming ideas into digital experiences</p>
+    </div>
 
-          <div class="bar">
-            <i class="fa-brands fa-js" style="color:#f7df1e;"></i>
-            <div class="info"><span>JavaScript</span></div>
-            <div class="progress-line javascript"><span></span></div>
-          </div>
+    <!-- Two-column body -->
+    <div class="about-body">
 
-          <div class="bar">
-            <i class="fa-brands fa-react" style="color:#61dafb;"></i>
-            <div class="info"><span>React.js</span></div>
-            <div class="progress-line react"><span></span></div>
-          </div>
-
-          <div class="bar">
-            <i class="fa-brands fa-node-js" style="color:#339933;"></i>
-            <div class="info"><span>Node.js</span></div>
-            <div class="progress-line nodejs"><span></span></div>
-          </div>
-
-          <div class="bar">
-            <!-- Using leaf icon usually used for mongoDB or standard database icon if not available -->
-            <i class="fa-solid fa-leaf" style="color:#47A248;"></i>
-            <div class="info"><span>MongoDB</span></div>
-            <div class="progress-line mongodb"><span></span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Professional Skills -->
-      <div class="container1">
-        <h2 class="heading1">Professional Skills</h2>
-
-        <div class="radial-bars">
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">Creativity</div>
-          </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">85%</div>
-            <div class="text">Communication</div>
-          </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">81%</div>
-            <div class="text">Problem Solving</div>
-          </div>
-
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">87%</div>
-            <div class="text">Teamwork</div>
-          </div>
-
-          <!-- New skill 1 -->
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-5" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">78%</div>
-            <div class="text">Leadership</div>
-          </div>
-
-          <!-- New skill 2 -->
-          <div class="radial-bar">
-            <svg viewBox="0 0 200 200">
-              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-6" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">92%</div>
-            <div class="text">Adaptability</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SHOWCASE -->
-    <section class="portfolio" id="project">
-      <div class="main-text">
-        <h2>Portfolio <span>Showcase</span></h2>
-        <p class="portfolio-subtitle">Take a journey through my work and see how I've grown as a developer.</p>
-      </div>
-
-      <!-- Tabs Toggle Bar -->
-      <div class="portfolio-tabs">
-        <button class="tab-btn active" data-target="tab-projects">Projects</button>
-        <button class="tab-btn" data-target="tab-cert">Certifications</button>
-        <button class="tab-btn" data-target="tab-tech">Tech Stacks</button>
-      </div>
-
-      <!-- Tabs Content Container -->
-      <div class="tab-content-container">
-        
-        <!-- 1. PROJECTS TAB -->
-        <div class="tab-pane active" id="tab-projects">
-          <div class="portfolio-content">
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="UI/UX Design Project" />
-              <div class="layer">
-                <h5>UI/UX Design</h5>
-                <p>Modern, user-centric interface design following latest design systems.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="Web Development Project" />
-              <div class="layer">
-                <h5>Web Development</h5>
-                <p>Responsive full-stack web application with authentication.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="App Design Project" />
-              <div class="layer">
-                <h5>App Design</h5>
-                <p>Cross-platform mobile application with native-feel UX.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="Portfolio Website" />
-              <div class="layer">
-                <h5>Portfolio Website</h5>
-                <p>Personal portfolio built with HTML, CSS animations and Spline 3D.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="React Application" />
-              <div class="layer">
-                <h5>React Application</h5>
-                <p>Feature-rich SPA built with React hooks, context, and REST APIs.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-
-            <div class="row">
-              <img src="./Image/skill.jpg" alt="Node.js Backend" />
-              <div class="layer">
-                <h5>Node.js Backend</h5>
-                <p>Scalable RESTful API with Express, MongoDB, and JWT auth.</p>
-                <a href="#" aria-label="View project"><i class="bx bx-link-external"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. CERTIFICATIONS TAB -->
-        <div class="tab-pane" id="tab-cert">
-          <div class="cert-grid">
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 1" />
-            </div>
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 2" />
-            </div>
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 3" />
-            </div>
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 4" />
-            </div>
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 5" />
-            </div>
-            <div class="cert-card">
-              <img src="./Image/skill.jpg" alt="Certification 6" />
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. TECH STACKS TAB -->
-        <div class="tab-pane" id="tab-tech">
-          <div class="tech-grid">
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
-              <span>HTML</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="JAVA" />
-              <span>JAVA</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
-              <span>CSS</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
-              <span>JavaScript</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" />
-              <span>Tailwind</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="ReactJS" />
-              <span>ReactJS</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node JS" />
-              <span>Node JS</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" class="invert-white" alt="ExpressJS" />
-              <span>ExpressJS</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
-              <span>MongoDB</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" />
-              <span>MySQL</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
-              <span>PostgreSQL</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
-              <span>Bootstrap</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
-              <span>Git</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="invert-white" alt="GitHub" />
-              <span>GitHub</span>
-            </div>
-            
-            <div class="tech-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase" />
-              <span>Firebase</span>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact-text">
-        <div class="section-label">Contact</div>
-        <h2>Let's Work <span>Together</span></h2>
-        <h4>Open to opportunities</h4>
-        <p>
-          Got a project in mind or a role to discuss? I'm always open to 
-          collaborating on meaningful work. Let's build something great together.
+      <!-- LEFT: Bio -->
+      <div class="about-left" data-reveal="left">
+        <p class="about-hello">Hello, I'm</p>
+        <h3 class="about-name">Pratik Chougule</h3>
+        <p class="about-bio">
+          I am an MCA student passionate about Web Development and Design.
+          I focus on creating engaging, user-friendly digital experiences and
+          always strive to deliver the best solution for every project. I love
+          turning ideas into reality using clean and efficient code — exploring
+          new technologies, frameworks, and design trends to keep my work
+          modern and effective.
         </p>
 
-        <ul class="contact-list">
-          <li><i class="bx bxs-envelope"></i> chougulepratik301@gmail.com</li>
-          <li><i class="bx bxs-phone"></i> +91 7387526892</li>
-        </ul>
+        <!-- Stats strip -->
+        <div class="about-stats-strip">
+          <div class="astat">
+            <span class="astat-num">1+</span>
+            <span class="astat-label">Years Exp.</span>
+          </div>
+          <div class="astat-divider"></div>
+          <div class="astat">
+            <span class="astat-num">5+</span>
+            <span class="astat-label">Projects</span>
+          </div>
+          <div class="astat-divider"></div>
+          <div class="astat">
+            <span class="astat-num">10+</span>
+            <span class="astat-label">Technologies</span>
+          </div>
+        </div>
 
-        <div class="contact-icons">
-          <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank" aria-label="LinkedIn">
-            <i class="bx bxl-linkedin"></i>
+        <!-- Buttons -->
+        <div class="about-buttons">
+          <a href="/Resume/PratikChouguleResume3.pdf" class="about-btn about-btn-primary">
+            <i class="bx bx-download"></i> Resume
           </a>
-          <a href="mailto:chougulepratik301@gmail.com" target="_blank" aria-label="Gmail">
-            <i class="bx bxl-gmail"></i>
-          </a>
-          <a href="https://github.com/PokerPratik" target="_blank" aria-label="Github">
-            <i class="bx bxl-github"></i>
+          <a href="#project" class="about-btn about-btn-outline">
+            <i class="bx bx-folder-open"></i> View Projects
           </a>
         </div>
       </div>
 
-      <div class="contact-form">
-        <form id="contact-form">
-          <input type="text"  name="name"    placeholder="Your Name"    required />
-          <input type="email" name="email"   placeholder="Your Email"   required />
-          <input type="text"  name="subject" placeholder="Subject"      required />
-          <textarea name="message" rows="6"  placeholder="Your Message" required></textarea>
-          <input type="submit" value="Send Message" class="send" />
-        </form>
-      </div>
-    </section>
+      <!-- RIGHT: Expertise Cards -->
+      <div class="about-right" data-reveal="right">
 
-    <!-- FOOTER -->
-    <footer class="portfolio-footer">
-      <div class="footer-left">
-        <h3>Pratik Chougule</h3>
-        <p>MongoDB · Express · React · Node</p>
+        <div class="exp-card">
+          <div class="exp-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Web Dev"
+              style="width: 32px; height: 32px; object-fit: contain;" />
+          </div>
+          <div class="exp-info">
+            <h4>Web Development</h4>
+            <p>Building responsive, modern web apps with clean, maintainable code for exceptional user experiences.</p>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+              style="width: 32px; height: 32px; object-fit: contain;" />
+          </div>
+          <div class="exp-info">
+            <h4>React &amp; Frontend</h4>
+            <p>Dynamic, interactive interfaces using React with scalable, component-based architecture.</p>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="MERN"
+              style="width: 32px; height: 32px; object-fit: contain;" />
+          </div>
+          <div class="exp-info">
+            <h4>MERN Stack</h4>
+            <p>Full-stack applications using MongoDB, Express.js, React, and Node.js end-to-end.</p>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="UI/UX"
+              style="width: 32px; height: 32px; object-fit: contain;" />
+          </div>
+          <div class="exp-info">
+            <h4>UI / UX Design</h4>
+            <p>Clean, user-first interfaces — from wireframes to polished, pixel-perfect layouts.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="skill">
+    <div class="sub-title" data-reveal="up">
+      <h2>My <span>Services</span></h2>
+      <p class="section-subtitle">What I can do for you</p>
+    </div>
+
+    <div class="services-container">
+      <div class="services-list">
+        <!-- Service 1 -->
+        <div class="service-card" data-reveal="left" data-delay="0">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+              alt="UI/UX Design" />
+          </div>
+          <div class="service-info">
+            <h3>UI / UX Design</h3>
+            <p>
+              Designing clean, intuitive interfaces that put users first.
+              From wireframes to pixel-perfect layouts with modern design principles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card" data-reveal="up" data-delay="100">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              alt="Web Development" />
+          </div>
+          <div class="service-info">
+            <h3>Web Development</h3>
+            <p>
+              Building responsive, fast, and accessible websites using
+              HTML, CSS, JavaScript, and modern frameworks like React.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card" data-reveal="right" data-delay="200">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              alt="MERN Stack" />
+          </div>
+          <div class="service-info">
+            <h3>MERN Stack</h3>
+            <p>
+              End-to-end application development with MongoDB, Express,
+              React, and Node.js — from database design to deployment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card" data-reveal="left" data-delay="300">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+              alt="API Development" />
+          </div>
+          <div class="service-info">
+            <h3>API Development</h3>
+            <p>
+              Designing and building robust RESTful APIs with proper authentication,
+              rate limiting, and clean documentation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card" data-reveal="up" data-delay="400">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+              alt="Database Design" />
+          </div>
+          <div class="service-info">
+            <h3>Database Design</h3>
+            <p>
+              Architecting efficient database schemas using MongoDB and MySQL,
+              optimized for scalability and performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card" data-reveal="right" data-delay="500">
+          <div class="service-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              alt="Mobile-First Design" />
+          </div>
+          <div class="service-info">
+            <h3>Mobile-First Design</h3>
+            <p>
+              Building fully responsive layouts that look stunning on every device,
+              from large desktops to small smartphones.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <div class="skills-section-title" data-reveal="up">
+    <h2>My <span>Skills</span></h2>
+  </div>
+
+  <section class="skills-wrapper">
+    <!-- Technical Skills -->
+    <div class="container1" id="skills" data-reveal="left">
+      <h2 class="heading1">Technical Skills</h2>
+
+      <div class="technical-bars">
+        <div class="bar">
+          <i class="fa-brands fa-html5" style="color:#e34c26;"></i>
+          <div class="info"><span>HTML5</span></div>
+          <div class="progress-line html"><span></span></div>
+        </div>
+
+        <div class="bar">
+          <i class="fa-brands fa-css3-alt" style="color:#264de4;"></i>
+          <div class="info"><span>CSS3</span></div>
+          <div class="progress-line css"><span></span></div>
+        </div>
+
+        <div class="bar">
+          <i class="fa-brands fa-js" style="color:#f7df1e;"></i>
+          <div class="info"><span>JavaScript</span></div>
+          <div class="progress-line javascript"><span></span></div>
+        </div>
+
+        <div class="bar">
+          <i class="fa-brands fa-react" style="color:#61dafb;"></i>
+          <div class="info"><span>React.js</span></div>
+          <div class="progress-line react"><span></span></div>
+        </div>
+
+        <div class="bar">
+          <i class="fa-brands fa-node-js" style="color:#339933;"></i>
+          <div class="info"><span>Node.js</span></div>
+          <div class="progress-line nodejs"><span></span></div>
+        </div>
+
+        <div class="bar">
+          <!-- Using leaf icon usually used for mongoDB or standard database icon if not available -->
+          <i class="fa-solid fa-leaf" style="color:#47A248;"></i>
+          <div class="info"><span>MongoDB</span></div>
+          <div class="progress-line mongodb"><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Skills -->
+    <div class="container1" data-reveal="right">
+      <h2 class="heading1">Professional Skills</h2>
+
+      <div class="radial-bars">
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">90%</div>
+          <div class="text">Creativity</div>
+        </div>
+
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">85%</div>
+          <div class="text">Communication</div>
+        </div>
+
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">81%</div>
+          <div class="text">Problem Solving</div>
+        </div>
+
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">87%</div>
+          <div class="text">Teamwork</div>
+        </div>
+
+        <!-- New skill 1 -->
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-5" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">78%</div>
+          <div class="text">Leadership</div>
+        </div>
+
+        <!-- New skill 2 -->
+        <div class="radial-bar">
+          <svg viewBox="0 0 200 200">
+            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+            <circle class="path path-6" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">92%</div>
+          <div class="text">Adaptability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SHOWCASE -->
+  <section class="portfolio" id="project">
+    <div class="main-text" data-reveal="up">
+      <h2>Portfolio <span>Showcase</span></h2>
+      <p class="portfolio-subtitle">Take a journey through my work and see how I've grown as a developer.</p>
+    </div>
+
+    <!-- Tabs Toggle Bar -->
+    <div class="portfolio-tabs" data-reveal="up" data-delay="100">
+      <button class="tab-btn active" data-target="tab-projects">Projects</button>
+      <button class="tab-btn" data-target="tab-cert">Certifications</button>
+      <button class="tab-btn" data-target="tab-tech">Tech Stacks</button>
+      <button class="tab-btn" data-target="tab-achievement">Achievements</button>
+    </div>
+
+    <!-- Tabs Content Container -->
+    <div class="tab-content-container">
+
+      <!-- 1. PROJECTS TAB -->
+      <div class="tab-pane active" id="tab-projects">
+        <div class="portfolio-content">
+
+          <a href="https://pratik-ai-assistant.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="project-card" data-reveal="left" data-delay="0">
+            <div class="project-img">
+              <img src="./Project/logo.png" alt="Pratik AI Assistant" />
+              <span class="project-tag"><i class='bx bx-play-circle'></i> Live</span>
+            </div>
+            <div class="project-info">
+              <h4>Pratik AI Assistant</h4>
+              <span class="project-subtitle">In Progress - Full Stack AI App</span>
+              <p>An intelligent AI assistant featuring real-time conversational intelligence, a responsive full-stack
+                architecture, and interactive UX design.</p>
+            </div>
+          </a>
+
+          <a href="https://weather-app-uubs.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card"
+            data-reveal="up" data-delay="100">
+            <div class="project-img">
+              <img src="./Project/HD-Weather-Image.jpg" alt="Weather App" />
+              <span class="project-tag"><i class='bx bx-play-circle'></i> Live</span>
+            </div>
+            <div class="project-info">
+              <h4>Weather App</h4>
+              <span class="project-subtitle">Completed - Frontend Web App</span>
+              <p>A dynamic and responsive weather application providing real-time forecasts and conditions, built with
+                modern web tech.</p>
+            </div>
+          </a>
+
+          <div class="project-card" data-reveal="right" data-delay="200">
+            <div class="project-img">
+              <img src="./Image/skill.jpg" alt="App Design Project" />
+            </div>
+            <div class="project-info">
+              <h4>App Design</h4>
+              <!-- <span class="project-subtitle">Completed - Mobile UX</span> -->
+              <p>Cross-platform mobile application interface with a native-feel user experience.</p>
+            </div>
+          </div>
+
+          <a href="https://first-portfolio-pratik123.vercel.app" target="_blank" rel="noopener noreferrer"
+            class="project-card" data-reveal="left" data-delay="300">
+            <div class="project-img">
+              <img src="/Project/Portfolio.png" alt="Portfolio Website" />
+              <span class="project-tag"><i class='bx bx-play-circle'></i> Live</span>
+            </div>
+            <div class="project-info">
+              <h4>Personal Portfolio</h4>
+              <span class="project-subtitle">Completed - Personal Portfolio</span>
+              <p>A fully responsive portfolio website showcasing skills, projects, contact form, and smooth scroll
+                animations.</p>
+            </div>
+          </a>
+
+          <div class="project-card" data-reveal="up" data-delay="400">
+            <div class="project-img">
+              <img src="./Image/skill.jpg" alt="React Application" />
+            </div>
+            <div class="project-info">
+              <h4>React Application</h4>
+              <!-- <span class="project-subtitle">Completed - Frontend App</span> -->
+              <p>Feature-rich SPA built with React hooks, context API, and powerful REST API integrations.</p>
+            </div>
+          </div>
+
+          <div class="project-card" data-reveal="right" data-delay="500">
+            <div class="project-img">
+              <img src="./Image/skill.jpg" alt="Node.js Backend" />
+            </div>
+            <div class="project-info">
+              <h4>Node.js API</h4>
+              <!-- <span class="project-subtitle">Completed - Backend Service</span> -->
+              <p>Scalable and secure RESTful API built with Express, MongoDB, and JSON Web Token authentication.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="footer-center">
-        <p>© 2026 Pratik Chougule. All rights reserved.</p>
+      <!-- 2. CERTIFICATIONS TAB -->
+      <div class="tab-pane" id="tab-cert">
+        <div class="cert-grid">
+          <div class="cert-card" data-reveal="left" data-delay="0">
+            <div class="cert-img-container">
+              <img src="./Certifications/Cloud Computing .pdf.png" alt="Cloud Computing" />
+            </div>
+            <div class="cert-info">
+              <h4>Cloud Computing</h4>
+              <p>NPTEL certification demonstrating a strong understanding of cloud architecture and services.</p>
+            </div>
+          </div>
+
+
+          <div class="cert-card" data-reveal="left" data-delay="200">
+            <div class="cert-img-container">
+              <img src="./Certifications/Java.png" alt="Java Programming" />
+            </div>
+            <div class="cert-info">
+              <h4>Java Programming</h4>
+              <p>Certified in advanced Java programming, object-oriented concepts, and application design.</p>
+            </div>
+          </div>
+
+          <div class="cert-card" data-reveal="right" data-delay="100">
+            <div class="cert-img-container">
+              <img src="./Certifications/intenship.png" alt="Web Dev Internship" />
+            </div>
+            <div class="cert-info">
+              <h4>Web Dev Internship</h4>
+              <p>Completed professional internship focusing on full-stack web development methodologies.</p>
+            </div>
+          </div>
+
+          <div class="cert-card" data-reveal="right" data-delay="300">
+            <div class="cert-img-container">
+              <img src="./Image/skill.jpg" alt="Certification 4" />
+            </div>
+            <div class="cert-info">
+              <h4>Achievement Title</h4>
+              <p>Detailed description of the certification, what was learned, and the skills acquired.</p>
+            </div>
+          </div>
+
+          <div class="cert-card" data-reveal="left" data-delay="400">
+            <div class="cert-img-container">
+              <img src="./Image/skill.jpg" alt="Certification 5" />
+            </div>
+            <div class="cert-info">
+              <h4>Achievement Title</h4>
+              <p>Detailed description of the certification, what was learned, and the skills acquired.</p>
+            </div>
+          </div>
+
+          <div class="cert-card" data-reveal="right" data-delay="500">
+            <div class="cert-img-container">
+              <img src="./Image/skill.jpg" alt="Certification 6" />
+            </div>
+            <div class="cert-info">
+              <h4>Achievement Title</h4>
+              <p>Detailed description of the certification, what was learned, and the skills acquired.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-right">
+      <!-- 3. TECH STACKS TAB -->
+      <div class="tab-pane" id="tab-tech">
+        <div class="tech-grid">
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" />
+            <span>HTML</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="JAVA" />
+            <span>JAVA</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" />
+            <span>CSS</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt="JavaScript" />
+            <span>JavaScript</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind" />
+            <span>Tailwind</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              alt="ReactJS" />
+            <span>ReactJS</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+              alt="Node JS" />
+            <span>Node JS</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+              class="invert-white" alt="ExpressJS" />
+            <span>ExpressJS</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB" />
+            <span>MongoDB</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" />
+            <span>MySQL</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL" />
+            <span>PostgreSQL</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap" />
+            <span>Bootstrap</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
+            <span>Git</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+              class="invert-white" alt="GitHub" />
+            <span>GitHub</span>
+          </div>
+
+          <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
+              alt="Firebase" />
+            <span>Firebase</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4. ACHIEVEMENTS TAB -->
+      <div class="tab-pane" id="tab-achievement">
+        <div class="cert-grid">
+
+          <div class="cert-card" data-reveal="left" data-delay="0">
+            <div class="cert-img-container">
+              <img src="./Achivement/Design fire.png" alt="Design Fire Achievement" />
+            </div>
+            <div class="cert-info">
+              <h4>Design Fire</h4>
+              <p> Tech Fest 2026. Participated in the Design Fire competition.</p>
+            </div>
+          </div>
+
+          <div class="cert-card" data-reveal="right" data-delay="100">
+            <div class="cert-img-container">
+              <img src="./Image/skill.jpg" alt="Top Contributor Achievement" />
+            </div>
+            <div class="cert-info">
+              <h4>Open Source Recognition</h4>
+              <p>Recognized over multiple sprints as a Top Contributor for critical bug fixes and feature
+                implementations in open-source UI libraries.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-text" data-reveal="left">
+      <div class="section-label">Contact</div>
+      <h2>Let's Work <span>Together</span></h2>
+      <h4>Open to opportunities</h4>
+      <p>
+        Got a project in mind or a role to discuss? I'm always open to
+        collaborating on meaningful work. Let's build something great together.
+      </p>
+
+      <ul class="contact-list">
+        <li><i class="bx bxs-envelope"></i> chougulepratik301@gmail.com</li>
+        <li><i class="bx bxs-phone"></i> +91 7387526892</li>
+      </ul>
+
+      <div class="contact-icons">
         <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank" aria-label="LinkedIn">
           <i class="bx bxl-linkedin"></i>
         </a>
@@ -644,142 +750,269 @@
           <i class="bx bxl-github"></i>
         </a>
       </div>
-    </footer>
+    </div>
 
-    <!-- SCRIPTS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Typed(".text", {
-          strings: [
-            '<span class="frontend">Frontend Developer 💻</span>',
-            '<span class="mern">MERN Stack Developer 🚀</span>',
-            '<span class="web">Web Developer 🌐</span>',
-          ],
-          typeSpeed: 55,
-          backSpeed: 40,
-          backDelay: 1400,
-          loop: true,
-        });
+    <div class="contact-form" data-reveal="right">
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="send" />
+      </form>
+    </div>
+  </section>
+
+  <!-- IMAGE MODAL (LIGHTBOX) -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="portfolio-footer">
+    <div class="footer-left">
+      <h3>Pratik Chougule</h3>
+      <p>MongoDB · Express · React · Node</p>
+    </div>
+
+    <div class="footer-center">
+      <p>© 2026 Pratik Chougule. All rights reserved.</p>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank" aria-label="LinkedIn">
+        <i class="bx bxl-linkedin"></i>
+      </a>
+      <a href="mailto:chougulepratik301@gmail.com" target="_blank" aria-label="Gmail">
+        <i class="bx bxl-gmail"></i>
+      </a>
+      <a href="https://github.com/PokerPratik" target="_blank" aria-label="Github">
+        <i class="bx bxl-github"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(".text", {
+        strings: [
+          '<span class="frontend">Frontend Developer 💻</span>',
+          '<span class="mern">MERN Stack Developer 🚀</span>',
+          '<span class="web">Web Developer 🌐</span>',
+        ],
+        typeSpeed: 55,
+        backSpeed: 40,
+        backDelay: 1400,
+        loop: true,
       });
-    </script>
+    });
+  </script>
 
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.48/build/spline-viewer.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.48/build/spline-viewer.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      emailjs.init("xmh9Oocmf8ZYuDljF");
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("xmh9Oocmf8ZYuDljF");
 
-      document.getElementById("contact-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        emailjs.sendForm("service_7fi1qz5", "template_66jmzqe", this)
-          .then(
-            function () {
-              alert("✅ Message sent successfully!");
-              document.getElementById("contact-form").reset();
-            },
-            function (error) {
-              console.error("EmailJS error:", error);
-              alert("❌ Failed: " + error.text);
-            }
-          );
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_7fi1qz5", "template_66jmzqe", this)
+        .then(
+          function () {
+            alert("✅ Message sent successfully!");
+            document.getElementById("contact-form").reset();
+          },
+          function (error) {
+            console.error("EmailJS error:", error);
+            alert("❌ Failed: " + error.text);
+          }
+        );
+    });
+  </script>
+  <!-- Splash Screen Script -->
+  <script>
+    // Lock scroll while splash is showing
+    document.body.style.overflow = 'hidden';
+
+    window.addEventListener('load', () => {
+      // Wait for loading bar to finish (2s bar + 0.8s buffer)
+      setTimeout(() => {
+        const splash = document.getElementById('splashScreen');
+        splash.classList.add('hidden');
+        // Re-enable scroll after fade out completes (0.7s transition)
+        setTimeout(() => {
+          document.body.style.overflow = '';
+          splash.style.display = 'none';
+        }, 700);
+      }, 2800);
+    });
+  </script>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+      mobileNav.classList.add('open');
+      mobileNavOverlay.classList.add('open');
+      hamburger.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileNav.classList.remove('open');
+      mobileNavOverlay.classList.remove('open');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', openMenu);
+    mobileNavClose.addEventListener('click', closeMenu);
+    mobileNavOverlay.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+
+  <!-- Custom Tabs Script -->
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and panes
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        // Add active class to corresponding target pane
+        const targetId = btn.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active');
       });
-    </script>
+    });
+  </script>
 
-    <!-- Mobile Nav Script -->
-    <script>
-      const hamburger       = document.getElementById('hamburger');
-      const mobileNav       = document.getElementById('mobileNav');
-      const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-      const mobileNavClose  = document.getElementById('mobileNavClose');
-      const mobileLinks     = document.querySelectorAll('.mobile-nav-link');
+  <!-- Scroll Animation Script -->
+  <script>
+    const skillsWrapper = document.querySelector('.skills-wrapper');
 
-      function openMenu() {
-        mobileNav.classList.add('open');
-        mobileNavOverlay.classList.add('open');
-        hamburger.classList.add('active');
-        hamburger.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMenu() {
-        mobileNav.classList.remove('open');
-        mobileNavOverlay.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-
-      hamburger.addEventListener('click', openMenu);
-      mobileNavClose.addEventListener('click', closeMenu);
-      mobileNavOverlay.addEventListener('click', closeMenu);
-      mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-    </script>
-
-    <!-- Custom Tabs Script -->
-    <script>
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      const tabPanes = document.querySelectorAll('.tab-pane');
-
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active class from all buttons and panes
-          tabBtns.forEach(b => b.classList.remove('active'));
-          tabPanes.forEach(p => p.classList.remove('active'));
-
-          // Add active class to clicked button
-          btn.classList.add('active');
-
-          // Add active class to corresponding target pane
-          const targetId = btn.getAttribute('data-target');
-          document.getElementById(targetId).classList.add('active');
-        });
-      });
-    </script>
-
-    <!-- Scroll Animation Script -->
-    <script>
-      const skillsWrapper = document.querySelector('.skills-wrapper');
-      
-      if (skillsWrapper) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // Add class to trigger CSS animations
-              skillsWrapper.classList.add('animate');
-              // Optional: Stop observing once animated
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.2 // Trigger when 20% visible
-        });
-
-        observer.observe(skillsWrapper);
-      }
-    </script>
-
-    <!-- Active Nav Link on Scroll -->
-    <script>
-      const sections = document.querySelectorAll('section[id], div[id]');
-      const navLinks = document.querySelectorAll('.navbar a');
-
-      const navObserver = new IntersectionObserver((entries) => {
+    if (skillsWrapper) {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === '#' + id) {
-                link.classList.add('active');
-              }
-            });
+            // Add class to trigger CSS animations
+            skillsWrapper.classList.add('animate');
+            // Optional: Stop observing once animated
+            observer.unobserve(entry.target);
           }
         });
       }, {
-        threshold: 0.4
+        threshold: 0.2 // Trigger when 20% visible
       });
 
-      sections.forEach(section => navObserver.observe(section));
-    </script>
-  </body>
+      observer.observe(skillsWrapper);
+    }
+  </script>
+
+  <!-- Scroll Reveal Animation -->
+  <script>
+    const revealEls = document.querySelectorAll('[data-reveal]');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = el.getAttribute('data-delay') || 0;
+          setTimeout(() => {
+            el.classList.add('is-visible');
+          }, parseInt(delay));
+          revealObserver.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+
+  <!-- Active Nav Link on Scroll -->
+  <script>
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    sections.forEach(section => navObserver.observe(section));
+  </script>
+
+  <!-- Lightbox (Modal) Script -->
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close-modal");
+
+    // Select all images inside cert-grid
+    const certImages = document.querySelectorAll('.cert-card img');
+
+    certImages.forEach(img => {
+      img.addEventListener('click', function () {
+        modal.style.display = "flex";
+        // Tiny timeout so CSS transition takes effect
+        setTimeout(() => modal.classList.add('show'), 10);
+        modalImg.src = this.src;
+        // Prevent background scrolling
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = "none";
+        document.body.style.overflow = ''; // Restore scrolling
+      }, 300); // Wait for transition fade-out
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal if user clicks anywhere outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape" && modal.classList.contains('show')) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+
 </html>
