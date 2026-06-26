@@ -20,10 +20,22 @@
   <!-- SPLASH SCREEN -->
   <div class="splash-screen" id="splashScreen">
     <div class="splash-content">
+      <img src="./Image/logoPC.png" alt="Logo" class="splash-logo-img" />
       <div class="splash-logo">Welcome to My <span>Portfolio</span></div>
       <p class="splash-tagline">MERN Stack &amp; Frontend Developer</p>
-      <div class="splash-loader">
-        <div class="splash-bar"></div>
+      <div class="splash-loader-wrapper">
+        <div class="splash-loader-labels">
+          <span class="splash-loading-text">Loading...</span>
+          <span class="splash-percent" id="splashPercent">0%</span>
+        </div>
+        <div class="splash-loader">
+          <div class="splash-bar">
+            <div class="splash-bar-shine"></div>
+          </div>
+        </div>
+        <div class="splash-dots">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
     <!-- Decorative glows -->
@@ -33,7 +45,10 @@
 
   <!-- HEADER -->
   <header class="header">
-    <a href="#" class="logo">Portfolio</a>
+    <a href="#" class="header-logo-container">
+      <img src="./Image/logoPC.png" alt="Logo" class="header-logo-img" />
+      <span class="logo">Portfolio</span>
+    </a>
 
     <nav class="navbar" id="navbar">  
       <a href="#" class="nav-link">Home</a>
@@ -836,8 +851,31 @@
     // Lock scroll while splash is showing
     document.body.style.overflow = 'hidden';
 
+    // Animate percentage counter in sync with the CSS bar (2.2s bar, 1s delay)
+    const percentEl = document.getElementById('splashPercent');
+    const barDuration = 2200; // ms, matches CSS splashLoad
+    const barDelay = 1000;    // ms, matches CSS animation-delay
+
+    setTimeout(() => {
+      const startTime = performance.now();
+      function updatePercent(now) {
+        const elapsed = now - startTime;
+        // Mimic the cubic-bezier curve of the CSS bar roughly
+        let progress = Math.min(elapsed / barDuration, 1);
+        // Ease-out feel: slow at end
+        const pct = Math.round(progress * 100);
+        percentEl.textContent = pct + '%';
+        if (progress < 1) {
+          requestAnimationFrame(updatePercent);
+        } else {
+          percentEl.textContent = '100%';
+        }
+      }
+      requestAnimationFrame(updatePercent);
+    }, barDelay);
+
     window.addEventListener('load', () => {
-      // Wait for loading bar to finish (2s bar + 0.8s buffer)
+      // Wait for loading bar to finish (2.2s bar + 1s delay + 0.6s buffer)
       setTimeout(() => {
         const splash = document.getElementById('splashScreen');
         splash.classList.add('hidden');
@@ -846,7 +884,7 @@
           document.body.style.overflow = '';
           splash.style.display = 'none';
         }, 700);
-      }, 2800);
+      }, 3800);
     });
   </script>
 

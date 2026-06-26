@@ -106,6 +106,27 @@ body {
   z-index: 2;
 }
 
+/* Splash logo image */
+.splash-logo-img {
+  width: 320px;
+  height: auto;
+  max-width: 75vw;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: splashFadeUp 0.8s 0.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  
+  /* Blending logic to remove solid background on dark themes */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 20px rgba(108, 99, 255, 0.4));
+  border-radius: 30px; /* Soften any harsh edges if background doesn't perfectly blend */
+  
+  /* Additional blending mask if the background is a solid color and we want rounded bounds */
+  mask-image: radial-gradient(circle, black 65%, rgba(0,0,0,0.8) 80%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 65%, rgba(0,0,0,0.8) 80%, transparent 100%);
+  
+  margin-bottom: 12px;
+}
+
 /* Big animated name */
 .splash-logo {
   font-family: 'Poppins', sans-serif;
@@ -139,26 +160,109 @@ body {
   animation: splashFadeUp 0.7s 0.6s ease forwards;
 }
 
-/* Loading bar track */
-.splash-loader {
-  width: 200px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
-  margin-top: 20px;
-  overflow: hidden;
+/* Loading wrapper */
+.splash-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
   opacity: 0;
   animation: splashFadeUp 0.5s 0.9s ease forwards;
+  width: 320px;
+  max-width: 80vw;
+}
+
+/* Label row: "Loading..." and "0%" */
+.splash-loader-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.splash-loading-text {
+  color: var(--text-muted);
+}
+
+.splash-percent {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Loading bar track */
+.splash-loader {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 3px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(108, 99, 255, 0.08);
+  position: relative;
 }
 
 /* Loading bar fill */
 .splash-bar {
   height: 100%;
   width: 0%;
-  border-radius: 10px;
-  background: var(--gradient-1);
-  animation: splashLoad 2s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6c63ff 0%, #00d4aa 60%, #6c63ff 100%);
+  background-size: 200% 100%;
+  animation:
+    splashLoad 2.2s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    splashShimmer 1.8s 1s linear infinite;
+  box-shadow:
+    0 0 12px rgba(108, 99, 255, 0.8),
+    0 0 24px rgba(0, 212, 170, 0.4);
+  position: relative;
+  overflow: hidden;
 }
+
+/* Inner shine sweep */
+.splash-bar-shine {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  animation: splashShineSweep 1.6s 1.2s ease-in-out infinite;
+  border-radius: 999px;
+}
+
+/* Animated three dots */
+.splash-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.splash-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+  opacity: 0.3;
+  animation: splashDotPulse 1.2s 1s ease-in-out infinite;
+}
+
+.splash-dots span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.splash-dots span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
 
 /* Decorative background glows */
 .splash-glow {
@@ -220,6 +324,23 @@ body {
     opacity: 1;
   }
 }
+
+@keyframes splashShimmer {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes splashShineSweep {
+  0%   { left: -60%; opacity: 0; }
+  30%  { opacity: 1; }
+  100% { left: 120%; opacity: 0; }
+}
+
+@keyframes splashDotPulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50%       { opacity: 1;    transform: scale(1.4); background: #00d4aa; }
+}
+
 
 /* ==========================================
    SCROLL REVEAL ANIMATION SYSTEM
@@ -296,6 +417,23 @@ body {
   transition: background 0.3s;
 }
 
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: default;
+  animation: slideRight 0.8s ease both;
+}
+
+.header-logo-img {
+  height: 48px;
+  width: auto;
+  border-radius: 5px;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.4));
+}
+
 .logo {
   font-family: 'Poppins', sans-serif;
   font-size: 26px;
@@ -305,9 +443,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  cursor: default;
   letter-spacing: -0.5px;
-  animation: slideRight 0.8s ease both;
 }
 
 @keyframes slideRight {
