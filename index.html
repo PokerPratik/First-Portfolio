@@ -12,7 +12,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Section-wise CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/splash.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
@@ -50,7 +61,7 @@
       <span class="logo">Portfolio</span>
     </a>
 
-    <nav class="navbar" id="navbar">  
+    <nav class="navbar" id="navbar">
       <a href="#" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#skill" class="nav-link">Services</a>
@@ -107,15 +118,20 @@
           Get In Touch <i class="bx bx-envelope"></i>
         </a>
       </div>
-      
+
       <!-- Hero Tech Icons -->
       <div class="home-mern-stack" data-reveal="up" data-delay="300">
         <div class="mern-icons">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"
+            title="Java" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"
+            title="HTML5" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"
+            title="React" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            alt="JavaScript" title="JavaScript" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"
+            title="Python" />
         </div>
       </div>
     </div>
@@ -501,12 +517,13 @@
 
           <div class="project-card" data-reveal="right" data-delay="200">
             <div class="project-img">
-              <img src="./Image/skill.jpg" alt="App Design Project" />
+              <img src="./Project/PrepAI.png" alt="App Design Project" />
             </div>
             <div class="project-info">
-              <h4>App Design</h4>
-              <!-- <span class="project-subtitle">Completed - Mobile UX</span> -->
-              <p>Cross-platform mobile application interface with a native-feel user experience.</p>
+              <h4>PrepAI</h4>
+              <span class="project-subtitle">In Progress - PrepAI</span>
+              <p>PrepAI is a website that helps students prepare for interview by providing them with practice
+                questions and mock tests.</p>
             </div>
           </div>
 
@@ -799,7 +816,8 @@
       <a href="https://www.linkedin.com/in/pratik-chougule-749664303/" target="_blank" aria-label="LinkedIn">
         <i class="bx bxl-linkedin"></i>
       </a>
-      <a href="mailto:chougulepratik301@gmail.com" target="_blank" aria-label="Gmail">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chougulepratik301@gmail.com" target="_blank"
+        aria-label="Gmail">
         <i class="bx bxl-gmail"></i>
       </a>
       <a href="https://github.com/PokerPratik" target="_blank" aria-label="Github">
@@ -809,248 +827,34 @@
   </footer>
 
   <!-- SCRIPTS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Typed(".text", {
-        strings: [
-          '<span class="frontend">Frontend Developer 💻</span>',
-          '<span class="mern">MERN Stack Developer 🚀</span>',
-          '<span class="web">Web Developer 🌐</span>',
-        ],
-        typeSpeed: 55,
-        backSpeed: 40,
-        backDelay: 1400,
-        loop: true,
-      });
-    });
-  </script>
 
+  <!-- Splash (runs immediately — before DOM ready) -->
+  <script src="js/splash.js"></script>
+
+  <!-- Typed.js library + hero typing init -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="js/typed-init.js"></script>
+
+  <!-- Spline 3D viewer -->
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.48/build/spline-viewer.js"></script>
 
+  <!-- EmailJS library + contact form handler -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    emailjs.init("xmh9Oocmf8ZYuDljF");
+  <script src="js/contact.js"></script>
 
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      emailjs.sendForm("service_7fi1qz5", "template_66jmzqe", this)
-        .then(
-          function () {
-            alert("✅ Message sent successfully!");
-            document.getElementById("contact-form").reset();
-          },
-          function (error) {
-            console.error("EmailJS error:", error);
-            alert("❌ Failed: " + error.text);
-          }
-        );
-    });
-  </script>
-  <!-- Splash Screen Script -->
-  <script>
-    // Lock scroll while splash is showing
-    document.body.style.overflow = 'hidden';
+  <!-- Mobile nav drawer -->
+  <script src="js/mobile-nav.js"></script>
 
-    // Animate percentage counter in sync with the CSS bar (2.2s bar, 1s delay)
-    const percentEl = document.getElementById('splashPercent');
-    const barDuration = 2200; // ms, matches CSS splashLoad
-    const barDelay = 1000;    // ms, matches CSS animation-delay
+  <!-- Portfolio tabs -->
+  <script src="js/tabs.js"></script>
 
-    setTimeout(() => {
-      const startTime = performance.now();
-      function updatePercent(now) {
-        const elapsed = now - startTime;
-        // Mimic the cubic-bezier curve of the CSS bar roughly
-        let progress = Math.min(elapsed / barDuration, 1);
-        // Ease-out feel: slow at end
-        const pct = Math.round(progress * 100);
-        percentEl.textContent = pct + '%';
-        if (progress < 1) {
-          requestAnimationFrame(updatePercent);
-        } else {
-          percentEl.textContent = '100%';
-        }
-      }
-      requestAnimationFrame(updatePercent);
-    }, barDelay);
+  <!-- Scroll animations (skills, reveal, active nav) -->
+  <script src="js/scroll-animations.js"></script>
 
-    window.addEventListener('load', () => {
-      // Wait for loading bar to finish (2.2s bar + 1s delay + 0.6s buffer)
-      setTimeout(() => {
-        const splash = document.getElementById('splashScreen');
-        splash.classList.add('hidden');
-        // Re-enable scroll after fade out completes (0.7s transition)
-        setTimeout(() => {
-          document.body.style.overflow = '';
-          splash.style.display = 'none';
-        }, 700);
-      }, 3800);
-    });
-  </script>
+  <!-- Image lightbox -->
+  <script src="js/lightbox.js"></script>
 
-  <!-- Mobile Nav Script -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-    const mobileNavClose = document.getElementById('mobileNavClose');
-    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function openMenu() {
-      mobileNav.classList.add('open');
-      mobileNavOverlay.classList.add('open');
-      hamburger.classList.add('active');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-      mobileNav.classList.remove('open');
-      mobileNavOverlay.classList.remove('open');
-      hamburger.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
-    hamburger.addEventListener('click', openMenu);
-    mobileNavClose.addEventListener('click', closeMenu);
-    mobileNavOverlay.addEventListener('click', closeMenu);
-    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-  </script>
-
-  <!-- Custom Tabs Script -->
-  <script>
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Remove active class from all buttons and panes
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabPanes.forEach(p => p.classList.remove('active'));
-
-        // Add active class to clicked button
-        btn.classList.add('active');
-
-        // Add active class to corresponding target pane
-        const targetId = btn.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('active');
-      });
-    });
-  </script>
-
-  <!-- Scroll Animation Script -->
-  <script>
-    const skillsWrapper = document.querySelector('.skills-wrapper');
-
-    if (skillsWrapper) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Add class to trigger CSS animations
-            skillsWrapper.classList.add('animate');
-            // Optional: Stop observing once animated
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.2 // Trigger when 20% visible
-      });
-
-      observer.observe(skillsWrapper);
-    }
-  </script>
-
-  <!-- Scroll Reveal Animation -->
-  <script>
-    const revealEls = document.querySelectorAll('[data-reveal]');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const delay = el.getAttribute('data-delay') || 0;
-          setTimeout(() => {
-            el.classList.add('is-visible');
-          }, parseInt(delay));
-          revealObserver.unobserve(el);
-        }
-      });
-    }, {
-      threshold: 0.12
-    });
-
-    revealEls.forEach(el => revealObserver.observe(el));
-  </script>
-
-  <!-- Active Nav Link on Scroll -->
-  <script>
-    const sections = document.querySelectorAll('section[id], div[id]');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + id) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    }, {
-      threshold: 0.4
-    });
-
-    sections.forEach(section => navObserver.observe(section));
-  </script>
-
-  <!-- Lightbox (Modal) Script -->
-  <script>
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeBtn = document.querySelector(".close-modal");
-
-    // Select all images inside cert-grid
-    const certImages = document.querySelectorAll('.cert-card img');
-
-    certImages.forEach(img => {
-      img.addEventListener('click', function () {
-        modal.style.display = "flex";
-        // Tiny timeout so CSS transition takes effect
-        setTimeout(() => modal.classList.add('show'), 10);
-        modalImg.src = this.src;
-        // Prevent background scrolling
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeModal() {
-      modal.classList.remove('show');
-      setTimeout(() => {
-        modal.style.display = "none";
-        document.body.style.overflow = ''; // Restore scrolling
-      }, 300); // Wait for transition fade-out
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-
-    // Close modal if user clicks anywhere outside the image
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-
-    // Close on Escape key press
-    document.addEventListener('keydown', (e) => {
-      if (e.key === "Escape" && modal.classList.contains('show')) {
-        closeModal();
-      }
-    });
-  </script>
 </body>
 
 </html>
+

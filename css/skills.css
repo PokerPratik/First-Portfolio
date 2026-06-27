@@ -1,0 +1,215 @@
+/* ==========================================
+   SKILLS SECTION (Technical + Professional)
+   ========================================== */
+.skills-section-title { text-align: center; padding: 0 8% 0; }
+
+.skills-section-title h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.skills-section-title h2 span {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 60px 8% 100px;
+  background: var(--bg);
+  align-items: start;
+}
+
+.container1 {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 50px 44px;
+}
+
+.heading1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  text-align: left;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+/* ── Technical skill bars ── */
+.bar { margin: 28px 0; }
+
+.bar i { font-size: 22px; color: var(--primary); margin-bottom: 6px; }
+
+.technical-bars .info { display: flex; justify-content: space-between; margin-bottom: 8px; }
+
+.technical-bars .info span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+.progress-line {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  overflow: visible;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(0.65, 0, 0.35, 1) 0.5s forwards;
+}
+
+.progress-line span {
+  position: relative;
+  height: 100%;
+  background: var(--gradient-1);
+  border-radius: 10px;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards;
+}
+
+.progress-line.html span       { width: 90%; }
+.progress-line.css span        { width: 85%; }
+.progress-line.javascript span { width: 80%; }
+.progress-line.react span      { width: 75%; }
+.progress-line.nodejs span     { width: 72%; }
+.progress-line.mongodb span    { width: 80%; }
+
+.progress-line span::after {
+  position: absolute;
+  content: '';
+  padding: 2px 8px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  right: -28px; top: -32px;
+  opacity: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+}
+
+.progress-line.html span::after       { content: "90%"; }
+.progress-line.css span::after        { content: "85%"; }
+.progress-line.javascript span::after { content: "80%"; }
+.progress-line.react span::after      { content: "75%"; }
+.progress-line.nodejs span::after     { content: "72%"; }
+.progress-line.mongodb span::after    { content: "80%"; }
+
+/* Pause all skill animations by default */
+.technical-bars .info span,
+.progress-line, .progress-line span,
+.progress-line span::after, .progress-line span::before,
+.progress-bar,
+.path-1, .path-2, .path-3, .path-4, .path-5, .path-6,
+.percentage, .radial-bar .text {
+  animation-play-state: paused !important;
+}
+
+/* Play when .animate is added */
+.skills-wrapper.animate .technical-bars .info span,
+.skills-wrapper.animate .progress-line,
+.skills-wrapper.animate .progress-line span,
+.skills-wrapper.animate .progress-line span::after,
+.skills-wrapper.animate .progress-line span::before,
+.skills-wrapper.animate .progress-bar,
+.skills-wrapper.animate .path-1, .skills-wrapper.animate .path-2,
+.skills-wrapper.animate .path-3, .skills-wrapper.animate .path-4,
+.skills-wrapper.animate .path-5, .skills-wrapper.animate .path-6,
+.skills-wrapper.animate .percentage,
+.skills-wrapper.animate .radial-bar .text {
+  animation-play-state: running !important;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0; height: 0;
+  border: 6px solid transparent;
+  border-top-color: var(--primary);
+  right: -6px; top: -14px;
+  opacity: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+}
+
+@keyframes animate   { 100% { transform: scaleX(1); } }
+@keyframes showText  { 100% { opacity: 1; } }
+
+/* ── Radial bars ── */
+.radial-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.radial-bar {
+  width: 100%; height: 160px;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.radial-bar svg {
+  width: 130px; height: 130px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  position: absolute; top: 50%; left: 50%;
+}
+
+.progress-bar {
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 10; fill: none;
+  stroke-dasharray: 502; stroke-dashoffset: 502;
+  animation: animate-bar 1s linear forwards;
+}
+
+.path {
+  stroke: url(#grad);
+  stroke-width: 10; fill: none;
+  stroke-dasharray: 502; stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 { stroke: #6c63ff; animation: animate-path1 1s 1s ease forwards; }
+.path-2 { stroke: #00d4aa; animation: animate-path2 1s 1s ease forwards; }
+.path-3 { stroke: #a78bfa; animation: animate-path3 1s 1s ease forwards; }
+.path-4 { stroke: #60a5fa; animation: animate-path4 1s 1s ease forwards; }
+.path-5 { stroke: #fb923c; animation: animate-path5 1s 1s ease forwards; }
+.path-6 { stroke: #34d399; animation: animate-path6 1s 1s ease forwards; }
+
+.percentage {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 800;
+  color: var(--text-primary);
+  opacity: 0;
+  animation: showText 0.5s 1.8s linear forwards;
+  z-index: 1;
+}
+
+.radial-bar .text {
+  position: absolute;
+  width: 100%; text-align: center; bottom: 2px;
+  color: var(--text-muted) !important;
+  font-size: 13px !important; font-weight: 500;
+  opacity: 0;
+  animation: showText 0.5s 1.8s linear forwards;
+  background: none; -webkit-text-fill-color: initial;
+}
+
+@keyframes animate-bar  { 100% { stroke-dashoffset: -1; } }
+@keyframes animate-path1 { 100% { stroke-dashoffset: 50; } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: 75; } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: 95; } }
+@keyframes animate-path4 { 100% { stroke-dashoffset: 65; } }
+@keyframes animate-path5 { 100% { stroke-dashoffset: 110; } }
+@keyframes animate-path6 { 100% { stroke-dashoffset: 40; } }

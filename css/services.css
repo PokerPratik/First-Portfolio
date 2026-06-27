@@ -1,0 +1,94 @@
+/* ==========================================
+   SERVICES SECTION
+   ========================================== */
+.services {
+  padding: 100px 8%;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 10%; right: 0;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sub-title { text-align: center; margin-bottom: 60px; position: relative; z-index: 1; }
+
+.sub-title h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.sub-title h2 span {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle { font-size: 16px; color: var(--text-muted); }
+
+.services-container { display: flex; justify-content: center; position: relative; z-index: 1; }
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(0, 212, 170, 0.03) 100%);
+  z-index: 0;
+}
+
+.service-card:hover { transform: translateY(-8px); border-color: rgba(108, 99, 255, 0.3); box-shadow: 0 16px 40px rgba(108, 99, 255, 0.15); }
+.service-card:hover::after { opacity: 1; }
+.service-card > * { position: relative; z-index: 1; }
+
+.service-icon {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+}
+
+.service-icon img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease; }
+.service-card:hover .service-icon img { transform: scale(1.12); }
+
+.service-info h3 { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 12px; }
+.service-info p  { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
