@@ -16,7 +16,7 @@
   .about-buttons { justify-content: flex-start; }
   .skills-wrapper { grid-template-columns: 1fr; }
   .services-list { grid-template-columns: 1fr 1fr; }
-  .tech-grid { grid-template-columns: repeat(3, 1fr); }
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
   .contact { grid-template-columns: 1fr; }
   .contact-text p { max-width: 100%; }
   .contact-text, .contact-list li, .contact-icons { text-align: center; justify-content: center; }
@@ -72,7 +72,7 @@
   .tab-btn { min-width: unset; border-radius: 12px; }
   .portfolio-content { padding: 0 5%; gap: 18px; grid-template-columns: 1fr; }
   .cert-img-container { height: 220px; }
-  .tech-grid { grid-template-columns: repeat(2, 1fr); padding: 0 2%; }
+  .tech-grid { grid-template-columns: repeat(3, 1fr); }
   .cert-grid { grid-template-columns: 1fr; padding: 0 5%; }
 
   .contact { padding: 80px 5%; gap: 40px; }
@@ -100,7 +100,7 @@
   .percentage { font-size: 16px; }
   .radial-bar .text { font-size: 11px !important; }
   .portfolio-tabs { grid-template-columns: 1fr; }
-  .portfolio-content, .tech-grid { grid-template-columns: 1fr; }
+  .portfolio-content, .tech-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-form input, .contact-form textarea { font-size: 13px; padding: 12px 14px; }
   .mobile-nav { padding: 22px 24px 36px; }
   .mobile-nav-link { font-size: 20px; }
