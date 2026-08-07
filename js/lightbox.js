@@ -5,9 +5,9 @@
 const modal     = document.getElementById('imageModal');
 const modalImg  = document.getElementById('modalImg');
 const closeBtn  = document.querySelector('.close-modal');
-const certImages = document.querySelectorAll('.cert-card img');
+const certImages = document.querySelectorAll('.cert-card img, .edu-logo-img');
 
-// Open modal on cert image click
+// Open modal on cert/edu image click
 certImages.forEach(img => {
   img.addEventListener('click', function () {
     modal.style.display = 'flex';
